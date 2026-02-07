@@ -1,0 +1,57 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/app/workspace",
+      "heartbeat": {
+        "every": "2h",
+        "activeHours": {
+          "start": "07:00",
+          "end": "22:00",
+          "timezone": "America/Bogota"
+        }
+      },
+      "maxConcurrent": 1,
+      "compaction": { "mode": "safeguard" },
+      "contextPruning": { "mode": "cache-ttl", "ttl": "1h" },
+      "humanDelay": { "mode": "natural" },
+      "blockStreamingCoalesce": {
+        "minChars": 80,
+        "maxChars": 500,
+        "idleMs": 1200
+      }
+    }
+  },
+  "session": {
+    "typingMode": "instant",
+    "typingIntervalSeconds": 5
+  },
+  "channels": {
+    "whatsapp": {
+      "dmPolicy": "open",
+      "allowFrom": ["*"],
+      "mediaMaxMb": 50,
+      "debounceMs": 4000,
+      "ackReaction": {
+        "emoji": "\ud83d\udc40",
+        "direct": true,
+        "group": true
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "whatsapp": { "enabled": true }
+    }
+  },
+  "commands": { "native": "auto", "restart": true },
+  "gateway": {
+    "port": 3000,
+    "mode": "local",
+    "bind": "lan",
+    "auth": {
+      "mode": "token",
+      "token": "dce71654b9cdad345477f11e38c59387dd6c03e79677c48c"
+    },
+    "controlUi": { "allowInsecureAuth": true }
+  }
+}

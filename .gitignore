@@ -1,0 +1,32 @@
+# Secrets - NEVER commit
+.env
+*.env.local
+
+# Session data (regenerable, large)
+.sendell/
+
+# Generated artifacts (can be regenerated)
+workspace/canvas/demos/*.html
+workspace/canvas/flows/*.json
+workspace/canvas/workflows/*.json
+workspace/canvas/api/*.yaml
+workspace/canvas/api/*.json
+workspace/generated/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# === IMPORTANT: These ARE tracked (agent knowledge) ===
+# !workspace/MEMORY.md        <- tracked
+# !workspace/memory/          <- tracked
+# !workspace/skills/          <- tracked
+# !workspace/SOUL.md          <- tracked
+# !workspace/AGENTS.md        <- tracked
