@@ -1,0 +1,3 @@
+# Statistics
+
+*No data yet.*
